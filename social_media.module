@@ -83,7 +83,7 @@ function social_media_block_info() {
  */
 function social_media_block_view($delta='') {
   $block = array();
-  
+
   switch($delta) {
     case 'social_media' :
       $block['subject'] = variable_get('social_media_title');
@@ -94,6 +94,8 @@ function social_media_block_view($delta='') {
       $variables['social_media_facebook'] = check_plain(variable_get('social_media_facebook'));
       $variables['social_media_twitter'] = check_plain(variable_get('social_media_twitter'));
       $variables['social_media_google'] = check_plain(variable_get('social_media_google'));
+      $variables['social_media_linkedin'] = check_plain(variable_get('social_media_linkedin'));
+      $variables['social_media_youtube'] = check_plain(variable_get('social_media_youtube'));
       $variables['social_media_instagram'] = check_plain(variable_get('social_media_instagram'));
       $variables['social_media_email'] = check_plain(variable_get('social_media_email'));
       $variables['social_media_fa'] = variable_get('social_media_fa');

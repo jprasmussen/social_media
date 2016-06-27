@@ -4,7 +4,7 @@
  * @file
  * Admin page callbacks for the Pets Saved module.
  * Configure Pets Saved settings.
- * 
+ *
  */
 
 function social_media_admin_settings() {
@@ -41,6 +41,7 @@ function social_media_admin_settings() {
 		'#description' => t("The direct link to the social media account."),
 		// '#required' => TRUE,
 		);
+
 	$form['social_media_twitter'] = array(
 		'#type' => 'textfield',
 		'#title' => t('Twitter'),
@@ -50,6 +51,27 @@ function social_media_admin_settings() {
 		'#description' => t("The direct link to the social media account."),
 		// '#required' => TRUE,
 		);
+
+	$form['social_media_linkedin'] = array(
+		'#type' => 'textfield',
+		'#title' => t('LinkedIn'),
+		'#size' => 60,
+		'#maxlength' => 255,
+		'#default_value' => variable_get('social_media_linkedin', ''),
+		'#description' => t("The direct link to the social media account."),
+		// '#required' => TRUE,
+		);
+
+	$form['social_media_youtube'] = array(
+		'#type' => 'textfield',
+		'#title' => t('YouTube'),
+		'#size' => 60,
+		'#maxlength' => 255,
+		'#default_value' => variable_get('social_media_youtube', ''),
+		'#description' => t("The direct link to the social media account."),
+		// '#required' => TRUE,
+		);
+
 	$form['social_media_instagram'] = array(
 		'#type' => 'textfield',
 		'#title' => t('Instagram'),
@@ -59,6 +81,7 @@ function social_media_admin_settings() {
 		'#description' => t("The direct link to the social media account."),
 		// '#required' => TRUE,
 		);
+
 	$form['social_media_google'] = array(
 		'#type' => 'textfield',
 		'#title' => t('Google+'),
@@ -68,6 +91,7 @@ function social_media_admin_settings() {
 		'#description' => t("The direct link to the social media account."),
 		// '#required' => TRUE,
 		);
+
 	$form['social_media_email'] = array(
 		'#type' => 'textfield',
 		'#title' => t('Email/Contact'),
