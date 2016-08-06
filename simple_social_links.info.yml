@@ -1,0 +1,7 @@
+name: Simple Social Links
+type: module
+description: Adds a block that can display links to a few social media sites.
+core: 8.x
+package: Custom
+dependencies:
+  - block

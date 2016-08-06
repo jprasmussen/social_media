@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains simple_social_links.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function simple_social_links_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the simple_social_links module.
+    case 'help.page.simple_social_links':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Adds a block that can display links to a few social media sites.') . '</p>';
+      return $output;
+
+    default:
+  }
+}

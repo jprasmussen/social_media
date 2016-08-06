@@ -1,0 +1,14 @@
+{
+  "name": "drupal/simple_social_links",
+  "type": "drupal-module",
+  "description": "Adds a block that can display links to a few social media sites.",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/simple_social_links",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/simple_social_links",
+    "source": "http://cgit.drupalcode.org/simple_social_links"
+  },
+  "require": { }
+}
