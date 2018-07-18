@@ -22,3 +22,23 @@ function simple_social_links_help($route_name, RouteMatchInterface $route_match)
     default:
   }
 }
+
+
+/**
+ * Implements hook_theme().
+ */
+function simple_social_links_theme($existing, $type, $theme, $path)
+{
+
+    return array('simple_social' =>
+        array(
+            'variables' => array(
+                'title' => 'Default title',
+                'facebook' => null,
+                'social' => null,
+                'twitter' => null,
+            ),
+            'template' => 'block--simple-social'
+        )
+    );
+}

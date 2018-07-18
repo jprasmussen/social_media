@@ -97,31 +97,21 @@ class SocialLinks extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $build = [];
-    $build['social_links_facebook']['#markup'] = '<div class="icon icon-facebook">
-    <a href="' . $this->configuration['facebook'] . '" target="_blank" title="">'.t('Facebook').'</a>
-    </div>';
-    $build['social_links_twitter']['#markup'] = '<div class="icon icon-twitter">
-    <a href="' . $this->configuration['twitter'] . '" target="_blank" title="">'.t('Twitter').'</a>
-    </div>';
-    $build['social_links_instagram']['#markup'] = '<div class="icon icon-instagram">
-    <a href="' . $this->configuration['instagram'] . '" target="_blank" title="">'.t('Instagram').'</a>
-    </div>';
-    $build['social_links_google_plus']['#markup'] = '<div class="icon icon-google">
-    <a href="' . $this->configuration['google_plus'] . '" target="_blank" title="">'.t('Google+').'</a>
-    </div>';
-    $build['social_links_linkedin']['#markup'] = '<div class="icon icon-linkedin">
-    <a href="' . $this->configuration['linkedin'] . '" target="_blank" title="">'.t('LinkedIn').'</a>
-    </div>';
-    $build['social_links_pinterest']['#markup'] = '<div class="icon icon-pinterest">
-    <a href="' . $this->configuration['pinterest'] . '" target="_blank" title="">'.t('Pinterest').'</a>
-    </div>';
-    $build['social_links_youtube']['#markup'] = '<div class="icon icon-youtube">
-    <a href="' . $this->configuration['youtube'] . '" target="_blank" title="">'.t('YouTube').'</a>
-    </div>';
-    $build['social_links_vimeo']['#markup'] = '<div class="icon icon-vimeo">
-    <a href="' . $this->configuration['vimeo'] . '" target="_blank" title="">'.t('Vimeo').'</a>
-    </div>';
+    $build = [
+        '#theme' => 'simple_social',
+        '#title' => $this->configuration['title'],
+        '#social' => [
+            'facebook' => $this->configuration['facebook'],
+            'twitter' =>$this->configuration['twitter'],
+            'instagram' =>$this->configuration['instagram'],
+            'google_plus' =>$this->configuration['google_plus'],
+            'linkedin' =>$this->configuration['linkedin'],
+            'pinterest' =>$this->configuration['pinterest'],
+            'youtube' =>$this->configuration['youtube'],
+            'vimeo' =>$this->configuration['vimeo'],
+        ],
+    ];
+
     return $build;
   }
 
